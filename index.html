@@ -240,12 +240,47 @@
     .game-screen.active {
       display: block;
     }
+
+    .footer {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      font-size: 14px;
+      color: #fff;
+    }
+
+    .footer a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      color: #000;
+      text-decoration: none;
+      background-color: #ddd;
+      padding: 12px;
+      border-radius: 18px;
+    }
+
+    .footer a:hover {
+      background-color: #ccc;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
+      transition: all 0.2s ease;
+    }
+
+    .footer img {
+      width: 48px;
+      height: 48px;
+    }
   </style>
 </head>
 
 <body>
   <div class="game-container">
-    <!-- Tela Inicial -->
+    <!-- Initial Screen -->
     <div id="startScreen" class="start-screen">
       <div class="game-logo">🏰 Claude Tower Defense 🏰</div>
       <div class="tower-emoji">🗼</div>
@@ -253,7 +288,7 @@
       <button id="startGameBtn" class="btn btn-start">🎮 Start Game</button>
     </div>
 
-    <!-- Tela do Jogo -->
+    <!-- Game Screen -->
     <div id="gameScreen" class="game-screen">
       <div class="game-header">
         <div class="stats">
@@ -305,6 +340,13 @@
         <button id="restartBtn" class="btn btn-start">🔄 Play Again</button>
       </div>
     </div>
+  </div>
+
+  <div class="footer">
+    <a href="https://github.com/ItaloFalzoni/claude-tower-defense" target="_blank">
+      <img src="./assets/icons/github.svg" alt="Github Icon">
+      <span>Ítalo Falzoni</span>
+    </a>
   </div>
 
   <script>
