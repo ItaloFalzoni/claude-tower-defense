@@ -119,7 +119,7 @@
     .btn {
       padding: 12px 24px;
       border: none;
-      border-radius: 8px;
+      border-radius: 18px;
       font-size: 16px;
       font-weight: bold;
       cursor: pointer;
@@ -151,7 +151,8 @@
       color: white;
     }
 
-    .btn:hover {
+    .btn:hover,
+    .controls a:hover {
       transform: translateY(-3px);
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     }
@@ -241,53 +242,23 @@
       display: block;
     }
 
-    .footer {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
-      font-size: 14px;
-      color: #fff;
-    }
-
-    .footer a {
+    .controls a {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
       justify-content: center;
       gap: 16px;
       color: #000;
       text-decoration: none;
       background-color: #ddd;
-      padding: 12px;
+      padding: 12px 24px;
       border-radius: 18px;
+      transition: all 0.3s ease;
     }
 
-    .footer a:hover {
-      background-color: #ccc;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      transform: translateY(-2px);
-      transition: all 0.2s ease;
-    }
-
-    .footer img {
-      width: 48px;
-      height: 48px;
-    }
-
-    @media screen and (max-width: 600px) {
-      .footer a {
-        flex-direction: row;
-        padding: 8px;
-        border-radius: 14px;
-        bottom: 8px;
-      }
-
-      .footer img {
-        width: 36px;
-        height: 36px;
-      }
+    .controls img {
+      width: 24px;
+      height: 24px;
     }
   </style>
 </head>
@@ -299,7 +270,15 @@
       <div class="game-logo">🏰 Claude Tower Defense 🏰</div>
       <div class="tower-emoji">🗼</div>
       <div class="game-subtitle">Defend your base against waves of enemies!</div>
-      <button id="startGameBtn" class="btn btn-start">🎮 Start Game</button>
+
+      <div class="controls">
+        <button id="startGameBtn" class="btn btn-start">🎮 Start Game</button>
+
+        <a href="https://github.com/ItaloFalzoni/claude-tower-defense" target="_blank">
+          <img src="./assets/icons/github.svg" alt="Github Icon">
+          <span>Ítalo Falzoni</span>
+        </a>
+      </div>
     </div>
 
     <!-- Game Screen -->
@@ -351,16 +330,17 @@
         <div style="margin: 20px 0;">
           <p id="finalStats"></p>
         </div>
-        <button id="restartBtn" class="btn btn-start">🔄 Play Again</button>
+
+        <div class="controls">
+          <button id="restartBtn" class="btn btn-start">🔄 Play Again</button>
+
+          <a href="https://github.com/ItaloFalzoni/claude-tower-defense" target="_blank">
+            <img src="./assets/icons/github.svg" alt="Github Icon">
+            <span>Ítalo Falzoni</span>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-
-  <div class="footer">
-    <a href="https://github.com/ItaloFalzoni/claude-tower-defense" target="_blank">
-      <img src="./assets/icons/github.svg" alt="Github Icon">
-      <span>Ítalo Falzoni</span>
-    </a>
   </div>
 
   <script>
