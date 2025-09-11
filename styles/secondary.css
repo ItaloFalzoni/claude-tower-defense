@@ -1,0 +1,10 @@
+.container a {
+  color: #FFF;
+  text-decoration: none;
+  transition: all .2s;
+}
+
+.container a:hover {
+  color: #b9b9b9;
+  transform: translateY(-3px);
+}
